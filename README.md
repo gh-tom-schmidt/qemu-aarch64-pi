@@ -1,40 +1,41 @@
 # qemu-aarch64-pi
-This build is used to compile and run assembly / cpp / c code on an armv8 - aarch64 - raspberry pi using QEMU.
+This build is used to compile and run assembly / C++ / C code on an ARMv8 - AArch64 - Raspberry Pi using QEMU.
 
-**Use only for education** 
+**Use only for education**
 
 Most of the incredible work comes from: **Mikolaj Stawiski**
+
 - [His original Article](https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu)
-- [His docker conatiner](https://hub.docker.com/r/stawiski/qemu-raspberrypi-3b)
-- [His repo](https://github.com/memfault/interrupt/blob/master/example/emulating-raspberry-pi-in-qemu/Dockerfile)
+- [His Docker container](https://hub.docker.com/r/stawiski/qemu-raspberrypi-3b)
+- [His repository](https://github.com/memfault/interrupt/blob/master/example/emulating-raspberry-pi-in-qemu/Dockerfile)
 
-*Note:* The emulation hasnt a good performance so it may not be suited for big projects.
+*Note:* The emulation doesn't have good performance so it may not be suited for big projects.
 
-It is possible to change the pi model, the architecture and the OS.
-In this build, the legacy and lite version of raspberry pi os is used.
-**Using a new version of the raspberry pi os may not work.**
-(I tested it with the newest lite version and it wasent working.)
+It is possible to change the Pi model, the architecture, and the OS.
+In this build, the legacy and lite version of Raspberry Pi OS is used.
+**Using a newer version of the Raspberry Pi OS may not work.**
+(I tested it with the newest lite version and it wasn't working.)
 
-*Note:* I tried to keep the docker image small.
+*Note:* I tried to keep the Docker image small.
 
-## Run the docker container
-Build the docker file with:
+## Run the Docker container
+Build the Dockerfile with:
 ```sh
   $ docker build -t qemu-aarch64 .
   $ docker run -it --rm -p 2222:2222
 ```
 
-Wait for the loggin to appeare. Maybe press enter to show the login message from the raspberry os.
+Wait for the login prompt to appear. Maybe press enter to show the login message from the Raspberry Pi OS.
 The basic username | password is: pi | raspberry
 
-## Login over ssh
+## Login over SSH
 ```sh
   $ ssh -p2222 pi@localhost
 ```
 
 Login with the default username | password: pi | raspberry
 
-Use the following to login without a password to make the section "Comile and Run" worke smoothly:
+Use the following to login without a password to make the section "Compile and Run" work smoothly:
 ```sh
   $ ssh-keygen -t rsa
   $ ssh-copy-id -p 2222 -i ~/.ssh/id_rsa.pub pi@localhost
@@ -49,11 +50,11 @@ You may need to change ownership and permissions:
 ```
 
 ## Compile and Run
-Use these VS Code included task to copy the files from the working directory to the pi.
-The task must be in .vscode -> tasks.json
-Run with STRG + SHIFT + B.
+Use these VS Code included tasks to copy the files from the working directory to the Pi.
+The tasks must be in .vscode -> tasks.json.
+Run with Ctrl + Shift + B.
 
-Use the included CompileAndRun.sh bash script on the pi to compile and run all .c , .cpp, .s files in the directory.
+Use the included CompileAndRun.sh bash script on the Pi to compile and run all .c, .cpp, .s files in the directory.
 ```sh
 source ./CompileAndRun.sh
 ```
