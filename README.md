@@ -20,7 +20,7 @@ In this build, the legacy and lite version of Raspberry Pi OS is used.
 
 If you don't have Docker on your local machine, use a GitHub Codespace.
 
-# Run the Docker container from Docker Hub
+## Run the Docker container from Docker Hub
 ```sh
   $ docker run -it --rm -p 2222:2222 dockertomschmidt/qemu-aarch64-pi:latest
 ```
