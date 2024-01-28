@@ -4,9 +4,9 @@ This build is used to compile and run assembly / cpp / c code on an armv8 - aarc
 **Use only for education** 
 
 Most of the increadible work comes from: **Mikolaj Stawiski**
-- (His original Article)[https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu]
-- (His docker conatiner)[https://hub.docker.com/r/stawiski/qemu-raspberrypi-3b]
-- (His repo)[https://github.com/memfault/interrupt/blob/master/example/emulating-raspberry-pi-in-qemu/Dockerfile]
+- [His original Article][https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu]
+- [His docker conatiner][https://hub.docker.com/r/stawiski/qemu-raspberrypi-3b]
+- [His repo][https://github.com/memfault/interrupt/blob/master/example/emulating-raspberry-pi-in-qemu/Dockerfile]
 
 *Note:* The emulation hasnt a good performance so it may not be suited for big projects.
 
