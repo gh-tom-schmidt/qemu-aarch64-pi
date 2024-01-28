@@ -1,0 +1,19 @@
+// generate: ssh-keygen -t rsa
+// add to: ssh-copy-id -p 2222 -i ~/.ssh/id_rsa.pub pi@localhost
+
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "Copy Files to PI",
+          "type": "shell",
+          "command": "scp -P 2222 * pi@localhost:.",
+          "problemMatcher": [],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          }
+      }
+  ]
+}
+
