@@ -3,7 +3,7 @@ This build is used to compile and run assembly / cpp / c code on an armv8 - aarc
 
 **Use only for education** 
 
-Most of the increadible work comes from: **Mikolaj Stawiski**
+Most of the incredible work comes from: **Mikolaj Stawiski**
 - [His original Article](https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu)
 - [His docker conatiner](https://hub.docker.com/r/stawiski/qemu-raspberrypi-3b)
 - [His repo](https://github.com/memfault/interrupt/blob/master/example/emulating-raspberry-pi-in-qemu/Dockerfile)
@@ -14,6 +14,8 @@ It is possible to change the pi model, the architecture and the OS.
 In this build, the legacy and lite version of raspberry pi os is used.
 **Using a new version of the raspberry pi os may not work.**
 (I tested it with the newest lite version and it wasent working.)
+
+*Note:* I tried to keep the docker image small.
 
 ## Run the docker container
 Build the docker file with:
