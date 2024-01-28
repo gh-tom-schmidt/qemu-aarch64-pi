@@ -21,7 +21,7 @@ Wait for the loggin to appeare. Maybe press enter to show the login message from
 The basic username | password is: pi | raspberry
 
 ## Login over ssh
-```console
+```bash
   $ ssh -p2222 pi@localhost
 ```
 
