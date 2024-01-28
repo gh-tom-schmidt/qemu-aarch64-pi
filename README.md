@@ -12,7 +12,7 @@ Most of the increadible work comes from: **Mikolaj Stawiski**
 
 ## Run the docker container
 Build the docker file with:
-```console
+```sh
   $ docker build -t qemu-aarch64 .
   $ docker run -it --rm -p 2222:2222
 ```
@@ -21,7 +21,7 @@ Wait for the loggin to appeare. Maybe press enter to show the login message from
 The basic username | password is: pi | raspberry
 
 ## Login over ssh
-```bash
+```sh
   $ ssh -p2222 pi@localhost
 ```
 
