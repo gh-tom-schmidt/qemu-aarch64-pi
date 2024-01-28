@@ -10,6 +10,11 @@ Most of the increadible work comes from: **Mikolaj Stawiski**
 
 *Note:* The emulation hasnt a good performance so it may not be suited for big projects.
 
+It is possible to change the pi model, the architecture and the OS.
+In this build, the legacy and lite version of raspberry pi os is used.
+**Using a new version of the raspberry pi os may not work.**
+(I tested it with the newest lite version and it wasent working.)
+
 ## Run the docker container
 Build the docker file with:
 ```sh
