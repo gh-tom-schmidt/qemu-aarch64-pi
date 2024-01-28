@@ -52,7 +52,6 @@ The task must be in .vscode -> tasks.json
 Run with STRG + SHIFT + B.
 
 Use the included CompileAndRun.sh bash script on the pi to compile and run all .c , .cpp, .s files in the directory.
-User
 ```sh
 source ./CompileAndRun.sh
 ```
