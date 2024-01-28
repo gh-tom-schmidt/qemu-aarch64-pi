@@ -18,7 +18,20 @@ In this build, the legacy and lite version of Raspberry Pi OS is used.
 
 *Note:* I tried to keep the Docker image small.
 
-## Run the Docker container
+If you don't have Docker on your local machine, use a GitHub Codespace.
+
+# Run the Docker container from Docker Hub
+```sh
+  $ docker run -it --rm -p 2222:2222 dockertomschmidt/qemu-aarch64-pi:latest
+```
+In GitHub Codespace, use port 55555 (or another port) instead of 2222:
+```sh
+  $ docker run -it --rm -p 55555:2222 dockertomschmidt/qemu-aarch64-pi:latest
+```
+
+## OR
+
+## Build and Run the Docker container
 Build the Dockerfile with:
 ```sh
   $ docker build -t qemu-aarch64 .
