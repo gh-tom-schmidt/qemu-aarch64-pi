@@ -12,30 +12,34 @@ Most of the increadible work comes from: **Mikolaj Stawiski**
 
 ## Run the docker container
 Build the docker file with:
-´´´bash
+```console
   $ docker build -t qemu-aarch64 .
   $ docker run -it --rm -p 2222:2222
+```
 
 Wait for the loggin to appeare. Maybe press enter to show the login message from the raspberry os.
 The basic username | password is: pi | raspberry
 
 ## Login over ssh
-´´´bash
+```console
   $ ssh -p2222 pi@localhost
+```
 
 Login with the default username | password: pi | raspberry
 
 Use the following to login without a password to make the section "Comile and Run" worke smoothly:
-´´´bash
+```console
   $ ssh-keygen -t rsa
   $ ssh-copy-id -p 2222 -i ~/.ssh/id_rsa.pub pi@localhost
+```
 
 You may need to change ownership and permissions:
-´´´bash
+```console
   $ chown user:user /home/user/.ssh/known_hosts
   $ chown user:user /home/user/.ssh
   $ chmod 700 /home/user/.ssh
   $ chmod 600 /home/user/.ssh/known_hosts
+```
 
 ## Compile and Run
 Use these VS Code included task to copy the files from the working directory to the pi.
@@ -43,6 +47,8 @@ The task must be in .vscode -> tasks.json
 Run with STRG + SHIFT + B.
 
 Use the included CompileAndRun.sh bash script on the pi to compile and run all .c , .cpp, .s files in the directory.
-User source ./CompileAndRun.sh to run the script.
-
-
+User
+```console
+source ./CompileAndRun.sh
+```
+to run the script.
