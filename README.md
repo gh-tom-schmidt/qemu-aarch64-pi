@@ -4,9 +4,9 @@ This build is used to compile and run assembly / cpp / c code on an armv8 - aarc
 **Use only for education** 
 
 Most of the increadible work comes from: **Mikolaj Stawiski**
-- https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu
-- https://hub.docker.com/r/stawiski/qemu-raspberrypi-3b
-- https://github.com/memfault/interrupt/blob/master/example/emulating-raspberry-pi-in-qemu/Dockerfile
+- (His original Article)[https://interrupt.memfault.com/blog/emulating-raspberry-pi-in-qemu]
+- (His docker conatiner)[https://hub.docker.com/r/stawiski/qemu-raspberrypi-3b]
+- (His repo)[https://github.com/memfault/interrupt/blob/master/example/emulating-raspberry-pi-in-qemu/Dockerfile]
 
 *Note:* The emulation hasnt a good performance so it may not be suited for big projects.
 
@@ -28,13 +28,13 @@ The basic username | password is: pi | raspberry
 Login with the default username | password: pi | raspberry
 
 Use the following to login without a password to make the section "Comile and Run" worke smoothly:
-```console
+```sh
   $ ssh-keygen -t rsa
   $ ssh-copy-id -p 2222 -i ~/.ssh/id_rsa.pub pi@localhost
 ```
 
 You may need to change ownership and permissions:
-```console
+```sh
   $ chown user:user /home/user/.ssh/known_hosts
   $ chown user:user /home/user/.ssh
   $ chmod 700 /home/user/.ssh
@@ -48,7 +48,7 @@ Run with STRG + SHIFT + B.
 
 Use the included CompileAndRun.sh bash script on the pi to compile and run all .c , .cpp, .s files in the directory.
 User
-```console
+```sh
 source ./CompileAndRun.sh
 ```
 to run the script.
