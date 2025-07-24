@@ -22,11 +22,11 @@ If you don't have Docker on your local machine, use a GitHub Codespace.
 
 ## Run the Docker container from Docker Hub
 ```sh
-  $ docker run -it --rm -p 2222:2222 dockertomschmidt/qemu-aarch64-pi:latest
+  $ docker run -it --rm -p 2222:2222 dockerschmidt/qemu-aarch64:latest
 ```
 In GitHub Codespace, use port 55555 (or another port) instead of 2222:
 ```sh
-  $ docker run -it --rm -p 55555:2222 dockertomschmidt/qemu-aarch64-pi:latest
+  $ docker run -it --rm -p 55555:2222 dockerschmidt/qemu-aarch64:latest
 ```
 
 ## OR
@@ -35,7 +35,7 @@ In GitHub Codespace, use port 55555 (or another port) instead of 2222:
 Build the Dockerfile with:
 ```sh
   $ docker build -t qemu-aarch64 .
-  $ docker run -it --rm -p 2222:2222
+  $ docker run -it --rm -p 2222:2222 qemu-aarch64
 ```
 
 Wait for the login prompt to appear. Maybe press enter to show the login message from the Raspberry Pi OS.
